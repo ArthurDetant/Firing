@@ -1,4 +1,5 @@
 See AUTHORS and COPYRIGHT for the list of contributors.
+Detant Arthur et Steichen Antoine
 
 ********************************************************************************************************
 Firing Squad Synchronization Problem:
