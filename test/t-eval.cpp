@@ -48,10 +48,19 @@ int main(int argc, char ** argv) {
 	//}
     // evaluation function of the solution
     //ca.eval(x, maxSize);
-	ca.hillClimberFirst(x,30,1000000);
+	ca.hillClimberFirst(x,30,100000);
 	//ca.iteratedLocalSearch(x,30,1000000);
 	ca.eval(x,maxSize);
+
+    char name[256];
+    for(unsigned i = 2; i <= x.fitness(); i++) {
+        sprintf(name, "../solution/s_%d.svg", i);
+        ca.exportSVG(x, i, name);
+    }
+    std::fstream fileout("../solution/solution.dat", std::ios::out);
+	fileout << x << std::endl;
+	fileout.close(); 
+	
 	std::cout << x << std::endl;
-	//std::cout<<" finess final : " << x.fitness();
 
 }

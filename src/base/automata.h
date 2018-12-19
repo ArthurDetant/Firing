@@ -176,7 +176,10 @@ public:
 				if(s.fitness()> solution.fitness()){cout << solution ; continue;}
 			}	
 			s.rules[solution.indices.at(nextIndice)] = solution.rules[solution.indices.at(nextIndice)];
-		} 
+		}
+		
+		
+    
 	}
 	
 	
