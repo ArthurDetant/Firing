@@ -1,0 +1,5 @@
+/home/user/Bureau/firing-squad-synchronization-problem-master/build/CMakeFiles/rebuild_cache.dir
+/home/user/Bureau/firing-squad-synchronization-problem-master/build/CMakeFiles/t-solution.dir
+/home/user/Bureau/firing-squad-synchronization-problem-master/build/CMakeFiles/t-exportSVG.dir
+/home/user/Bureau/firing-squad-synchronization-problem-master/build/CMakeFiles/t-eval.dir
+/home/user/Bureau/firing-squad-synchronization-problem-master/build/CMakeFiles/edit_cache.dir
