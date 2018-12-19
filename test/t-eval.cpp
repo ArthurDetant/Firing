@@ -48,8 +48,8 @@ int main(int argc, char ** argv) {
 	//}
     // evaluation function of the solution
     //ca.eval(x, maxSize);
-	ca.hillClimberFirst(x,30,100000);
-	//ca.iteratedLocalSearch(x,30,1000000);
+	ca.hillClimberFirst(x,30,1000000);
+	//ca.iteratedLocalSearch(x,30,10000);
 	ca.eval(x,maxSize);
 
     char name[256];

@@ -165,7 +165,6 @@ public:
 		int fitness ;
 		int nextIndice = 0, nextVal = 0;		
 		for(int i = 0; i < maxIter; i++){
-			s= solution;
 			nextIndice = rand() % solution.indices.size();
 			nextVal =( s.rules[solution.indices.at(nextIndice)] + (rand() % (3)))% 4;
 		
@@ -186,18 +185,21 @@ public:
 	void iteratedLocalSearch(Solution & solution,int nMax,int maxIter){
 		srand(time(NULL));
 		int randIndice, randVal;
+		Solution s = solution;
+		
 		for(int i = 0; i < maxIter; i++){
-			hillClimberFirst(solution,nMax,10000);
-						eval(solution,nMax);
+			hillClimberFirst(solution,nMax,100000);
+			eval(solution,nMax);
 
 			for(int i = 0; i < 10; i++){
-				randIndice = rand() % solution.indices.size();
-				randVal = ( solution.rules[solution.indices.at(randIndice)] + (rand() % (3-1) +1))% 4;
-				solution.rules[randIndice] = randVal;
+				randIndice = rand() % s.indices.size();
+				randVal = ( s.rules[s.indices.at(randIndice)] + (rand() % (3-1) +1))% 4;
+				s.rules[randIndice] = randVal;
 			}
 			
-			hillClimberFirst(solution,nMax,10000);
-						eval(solution,nMax);
+			hillClimberFirst(s,nMax,100000);
+						eval(s,nMax);
+			if (s.fitness() > solution.fitness()){solution = s;}
 
 			
 		}
